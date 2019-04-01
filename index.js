@@ -14,44 +14,57 @@ class App extends Component {
 
   componentDidMount() {
     console.log('componentDidMount Fired');
-    var temp = this.state.data;
-    temp.push(1)
+
+    var i, temp = [];
+    for (i = 0; i < 10; i++) {
+      temp.push(i);
+    }
+    // console.log(temp);
+
     this.setState(
       { data: temp }
     )
-    temp.push(-1)
-    this.setState(
-      { data: temp }
-    )
+
+    // var temp = this.state.data;
+    // temp.push(1)
+    // this.setState(
+    //   { data: temp }
+    // )
   }
 
   componentDidUpdate() {
     console.log('componentDidUpdate Fired');
 
+    // var temp = this.state.data;
+    // this.setState( { data: temp } )
   }
 
   clickButton() {
-    console.log('clciked');
+    console.log('clicked');
+
     var temp = this.state.data;
-    temp.push(temp.length + 1)
+    temp.push(temp.length)
     this.setState(
       { data: temp }
     )
   }
 
   render() {
+    console.log('render');
+
     return (
       <div>
         <Hello name={this.state.name} />
-        <p>
-          <input type="button" value="Submit" onClick={() => this.clickButton()} />
-        </p>
 
         {this.state.data.map((item) => {
           return (
             <p>{item}</p>
           );
         })}
+
+        <p>
+          <input type="button" value="Submit" onClick={() => this.clickButton()} />
+        </p>
       </div>
     );
   }
