@@ -3,6 +3,8 @@ import { render } from 'react-dom';
 import Hello from './Hello';
 import './style.css';
 
+var MapFunctionCounter = 0;
+
 class App extends Component {
   constructor() {
     super();
@@ -42,8 +44,12 @@ class App extends Component {
   clickButton() {
     console.log('clicked');
 
+    var i, temp = [];
     var temp = this.state.data;
-    temp.push(temp.length)
+    // temp.push(temp.length);
+    for (i = 0; i < 10; i++) {
+      temp.push(temp.length);
+    }
     this.setState(
       { data: temp }
     )
@@ -57,9 +63,9 @@ class App extends Component {
         <Hello name={this.state.name} />
 
         {this.state.data.map((item) => {
-          return (
-            <p>{item}</p>
-          );
+          MapFunctionCounter = MapFunctionCounter + 1;
+
+          return (<p>{item}</p>);
         })}
 
         <p>
