@@ -18,7 +18,7 @@ class App extends Component {
     console.log('componentDidMount Fired');
 
     var i, temp = [];
-    for (i = 0; i < 10; i++) {
+    for (i = 0; i < 10000; i++) {
       temp.push(i);
     }
     // console.log(temp);
@@ -47,7 +47,7 @@ class App extends Component {
     var i, temp = [];
     var temp = this.state.data;
     // temp.push(temp.length);
-    for (i = 0; i < 10; i++) {
+    for (i = 0; i < 10000; i++) {
       temp.push(temp.length);
     }
     this.setState(
