@@ -9,7 +9,7 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
-      name: 'React',
+      name: 'POC: React SET State',
       data: []
     };
   }
@@ -18,7 +18,7 @@ class App extends Component {
     console.log('componentDidMount Fired');
 
     var i, temp = [];
-    for (i = 0; i < 5; i++) {
+    for (i = 1; i <= 5; i++) {
       temp.push(i);
     }
     // console.log(temp);
@@ -47,7 +47,7 @@ class App extends Component {
     var i, temp = [];
     var temp = this.state.data;
     // temp.push(temp.length);
-    for (i = 0; i < 5; i++) {
+    for (i = 1; i <= 5; i++) {
       temp.push(temp.length);
     }
     this.setState(
@@ -70,7 +70,7 @@ class App extends Component {
               <tbody>
                 <tr>
                   <td style={{ border: "1px solid green" }}>
-                    {item + 1}
+                    {"_" + item + "_"}
                   </td>
                 </tr>
               </tbody>
