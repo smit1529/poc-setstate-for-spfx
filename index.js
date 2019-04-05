@@ -61,7 +61,7 @@ class App extends Component {
 
     return (
       <div>
-        <Hello name={this.state.name} />
+        <Hello name={this.state.name + " - " + this.state.data.length} />
 
         <div style={{ overflow: "auto", height: "250px" }}>
           <table>
@@ -78,7 +78,7 @@ class App extends Component {
             </tbody>
           </table>
         </div>
-        
+
         <p>
           <input type="button" value="Submit" onClick={() => this.clickButton()} />
         </p>
