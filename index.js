@@ -21,24 +21,14 @@ class App extends Component {
     for (i = 1; i <= 5; i++) {
       temp.push(i);
     }
-    // console.log(temp);
 
     this.setState(
       { data: temp }
     )
-
-    // var temp = this.state.data;
-    // temp.push(1)
-    // this.setState(
-    //   { data: temp }
-    // )
   }
 
   componentDidUpdate() {
     console.log('componentDidUpdate Fired');
-
-    // var temp = this.state.data;
-    // this.setState( { data: temp } )
   }
 
   clickButton() {
@@ -46,7 +36,7 @@ class App extends Component {
 
     var i, temp = [];
     var temp = this.state.data;
-    // temp.push(temp.length);
+    
     for (i = 1; i <= 5; i++) {
       temp.push(temp.length + 1);
     }
@@ -57,7 +47,6 @@ class App extends Component {
 
   render() {
     console.log('render');
-
 
     return (
       <div>
