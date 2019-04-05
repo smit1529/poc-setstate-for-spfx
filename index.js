@@ -18,7 +18,7 @@ class App extends Component {
     console.log('componentDidMount Fired');
 
     var i, temp = [];
-    for (i = 0; i < 10000; i++) {
+    for (i = 0; i < 5; i++) {
       temp.push(i);
     }
     // console.log(temp);
@@ -47,7 +47,7 @@ class App extends Component {
     var i, temp = [];
     var temp = this.state.data;
     // temp.push(temp.length);
-    for (i = 0; i < 10000; i++) {
+    for (i = 0; i < 5; i++) {
       temp.push(temp.length);
     }
     this.setState(
@@ -65,7 +65,17 @@ class App extends Component {
         {this.state.data.map((item) => {
           MapFunctionCounter = MapFunctionCounter + 1;
 
-          return (<p>{item}</p>);
+          return (
+            <table>
+              <tbody>
+                <tr>
+                  <td style={{ border: "1px solid green" }}>
+                    {item + 1}
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          );
         })}
 
         <p>
